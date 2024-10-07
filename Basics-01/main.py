@@ -16,6 +16,7 @@ print("world")
 
 # Integer
 print(8)
+print(10)
 # 1*10^308
 print(1e309)
 
