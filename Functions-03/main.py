@@ -44,6 +44,8 @@ x = add(2, 3)  # we have to give the values
 logger.info(x)
 
 
+# print(add.__doc__)
+
 # positional arguments
 # During a function call, values passed through arguments should be in the order
 # of parameters in the function definition. This is called positional arguments
@@ -68,3 +70,40 @@ def multiply(*args):
 
 
 logger.info(multiply(1, 2, 3, 6, 5, 6))
+
+
+# kwargs
+# **kwargs allows us to pass any number of keyword arguments.
+# Keyword arguments mean that they contain a key-value pair, like a Python dictionary.
+
+
+def display(**num):
+    for (key, value) in num.items():
+        logger.info(f"{key} -> {value}")
+
+
+print(display(india='delhi', srilanka='colombo', nepal='kathmandu', pakistan='islamabad'))
+
+
+# without return statement it gives a none statement first and then print the
+# output as the python have default types to give a return statement as a "none"
+
+def is_even(num):
+    """
+    the is even is function for finding num to be even or odd
+    """
+
+    # x = i % 2 == 0
+    #
+    # return x
+
+    if num % 2 == 0:
+        print("even")
+
+    else:
+        print("odd")
+
+
+is_even(5)
+
+
