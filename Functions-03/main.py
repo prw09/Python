@@ -107,3 +107,27 @@ def is_even(num):
 is_even(5)
 
 
+def h(y):
+    num = 6
+    num += 1
+    print(num)
+
+
+x = 10
+h(5)
+print(x)
+
+
+#  Nested Function
+
+def f():
+    def g():
+        print("G")
+
+    g()
+    print("H")
+
+
+f()
+
+
