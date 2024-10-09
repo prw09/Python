@@ -120,6 +120,8 @@ print(x)
 
 #  Nested Function
 
+# Example 01
+
 def f():
     def g():
         print("G")
@@ -131,3 +133,75 @@ def f():
 f()
 
 
+# Example 02
+
+def g(nums):
+    def func():
+        n = 'abc'
+
+    nums = nums + 1
+    print('in g(x): x =', nums)
+    func()
+    return nums
+
+
+n = 3
+z = g(x)
+
+
+# Example 03
+
+def g(x):
+    def h(x):
+        x = x+1
+        print("in h(x): x = ", x)
+    x = x + 1
+    print('in g(x): x = ', x)
+    h(x)
+    return x
+
+x = 3
+z = g(x)
+print('in main program scope: x = ', x)
+print('in main program scope: z = ', z)
+
+
+# Functions are 1st class citizens
+# Example 01
+def square(num):
+    return num**2
+
+
+logger.info(type(square))
+# Here it has shown a 1st class function.
+# function is a datatype in python it can do all a datatype can do
+squareofnumber = square(5)
+logger.info(squareofnumber)
+# you can also delete a func by using
+del(square)
+
+
+# Example 02
+def f():
+    def x(a, b):
+        return a + b
+
+    return x
+
+
+val = f()(3, 4)
+print(val)
+
+# Here the f() func is returning a func as value is this only possible in python
+
+
+def func_a():
+    print('inside func_a')
+
+
+def func_b(z):
+    print('inside func_c')
+    return z()
+
+
+logger.info(func_b(func_a))
