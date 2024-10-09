@@ -153,12 +153,14 @@ z = g(x)
 
 def g(x):
     def h(x):
-        x = x+1
+        x = x + 1
         print("in h(x): x = ", x)
+
     x = x + 1
     print('in g(x): x = ', x)
     h(x)
     return x
+
 
 x = 3
 z = g(x)
@@ -169,16 +171,16 @@ print('in main program scope: z = ', z)
 # Functions are 1st class citizens
 # Example 01
 def square(num):
-    return num**2
+    return num ** 2
 
 
 logger.info(type(square))
 # Here it has shown a 1st class function.
 # function is a datatype in python it can do all a datatype can do
-squareofnumber = square(5)
-logger.info(squareofnumber)
+# squareofnumber = square(5)
+# logger.info(squareofnumber)
 # you can also delete a func by using
-del(square)
+del (square)
 
 
 # Example 02
@@ -191,6 +193,7 @@ def f():
 
 val = f()(3, 4)
 print(val)
+
 
 # Here the f() func is returning a func as value is this only possible in python
 
@@ -205,3 +208,77 @@ def func_b(z):
 
 
 logger.info(func_b(func_a))
+
+# Lambda Functions
+
+
+# Benefits of using a Function
+
+# - Code Modularity
+# - Code Readability
+# - Code Reusability
+
+### Lambda Function
+
+# A lambda function is a small anonymous function.
+#
+# A lambda function can take any number of arguments, but can only have one expression.
+
+
+# example 01
+
+squareofnumber = lambda x: x ** 2
+logger.info(squareofnumber(6))
+"""
+Here is a example of lambda func as it is soo easy to use and important 
+best feature of python 
+"""
+
+sumofnumbers = lambda x, y: x + y
+logger.info(sumofnumbers(2, 9))
+
+# Diff between lambda vs Normal Function
+
+# - No name
+# - lambda has no return value(in fact,returns a function)
+# - lambda is written in 1 line
+# - not reusable
+#
+# Then why use lambda functions?<br>
+# **They are used with HOF**
+
+evenoddnumber = lambda x: "even" if x % 2 == 0 else "odd"
+logger.info(evenoddnumber(6))
+
+#  Higher order func
+
+# map
+
+print(list(map(lambda x: x ** 2, [1, 2, 3, 4, 5])))
+
+L = [1, 3, 4, 6, 7, 8]
+print(list(map(lambda x:'even' if x % 2 == 0 else 'odd', L)))
+
+
+# fetch names from a list of dict
+
+users = [
+    {
+        'name':'Rahul',
+        'age':45,
+        'gender':'male'
+    },
+    {
+        'name':'Nitish',
+        'age':33,
+        'gender':'male'
+    },
+    {
+        'name':'Ankita',
+        'age':50,
+        'gender':'female'
+    }
+]
+
+n = list(map(lambda users:users['age'], users))
+print(n)
