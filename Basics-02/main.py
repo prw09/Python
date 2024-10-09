@@ -82,3 +82,29 @@ num = num // 10
 d = a, b, c
 
 logger.info(f"The number is {d}")
+
+
+def sum_of_digits():
+    try:
+        # Take input from the user and validate it's a three-digit number
+        num = int(input("Enter a 3-digit number: "))
+        if 100 <= num <= 999:
+            # Extract each digit using modulus and integer division
+            a = num % 10
+            b = (num // 10) % 10
+            c = (num // 100) % 10
+
+            # Calculate the sum of the digits
+            digit_sum = a + b + c
+
+            # Print the digits and their sum
+            print(f"The digits are: {c}, {b}, {a}")
+            print(f"The sum of the digits is: {digit_sum}")
+        else:
+            print("Please enter a valid 3-digit number.")
+    except ValueError:
+        print("Invalid input. Please enter a numeric value.")
+
+
+# Call the function
+sum_of_digits()
