@@ -280,5 +280,5 @@ users = [
     }
 ]
 
-n = list(map(lambda users:users['age'], users))
-print(n)
+ns = list(map(lambda users:users['age'], users))
+print(ns)

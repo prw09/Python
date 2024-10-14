@@ -2,6 +2,7 @@
 #
 # In Python specifically, strings are a sequence of Unicode Characters
 #
+print('2')
 # - Creating Strings
 a = 'hello'
 print(a)
