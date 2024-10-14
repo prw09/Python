@@ -117,11 +117,28 @@ print([5, 6] in L2)
 
 for i in L1:
     print(i, end=' ')
-
-print(end='')
+print()
 
 for i in L2:
     print(i, end=' ')
+print()
 
 
 # List functions
+
+# Len
+print(len(L1))
+print(len(L2))
+
+# Count
+print(L1.count(4))
+
+# index
+print(L2.index(2))
+
+# copy
+print(L1.copy())
+
+
+
+
