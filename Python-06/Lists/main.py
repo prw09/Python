@@ -33,7 +33,6 @@ print(nums[3])
 print(nums[-1])
 print(nums[-2])
 
-
 # Slicing
 
 L = [1, 2, 3, 4, 5]
@@ -42,7 +41,6 @@ print(L[0::2])
 
 # Reverse a list
 print(L[::-1])
-
 
 # Add an item in list
 
@@ -63,7 +61,6 @@ print(List)
 List.insert(2, 3)
 print(List)
 
-
 # Editing items in a list
 # as a list is a mutable data-type then we can edit the list easily
 
@@ -82,10 +79,49 @@ print(Listnum)
 
 # Deleting the list
 del Listnum
-print(Listnum)
+# print(Listnum)
 
 # Remove
 Listnum = [1, 2, 3]
+Listnum.remove(3)
+print(Listnum)
+
+# pop
+Listnum = [1, 2, 3, 4, 5, 6]
+Listnum.pop()
+print(Listnum)
+
+# clear
+Listnum = [1, 2, 3, 4, 5, 6]
+Listnum.clear()
+print(Listnum)
+
+# Operators on lists
+
+# Arithmetic (+ ,*)
+
+L1 = [1, 2, 3, 4]
+L2 = [5, 6, 7, 8]
+
+# Concatenation/Merge
+print(L1 + L2)
+
+L1 = [1, 2, 3, 4, 5]
+L2 = [1, 2, 3, 4, [5, 6]]
+
+print(5 not in L1)
+print([5, 6] in L2)
 
 
+# Loops
 
+for i in L1:
+    print(i, end=' ')
+
+print(end='')
+
+for i in L2:
+    print(i, end=' ')
+
+
+# List functions
