@@ -188,14 +188,29 @@ var3 = [i*j for i in L1 for j in L2]
 
 
 # 2 ways to traverse a list
-# item-wise
+
 # index-wise
-
-
 L = [1, 2, 3, 4]
 
 for i in range(0, len(L)):
     print(i, end=" ")
+print()
+
+# item-wise
+for i in L:
+    print(i, end=" ")
+print()
 
 
+# List questions
+
+# Create 2 lists from a given list where
+L = [1, 2, 3, 4, 5, 6]
+l_copy = L.copy()
+print(l_copy)
+
+# 1st list will contain all the odd numbers from the original list and
+
+
+# the 2nd one will contain all the even numbers
 
