@@ -44,8 +44,7 @@ print(L[::-1])
 
 # Add an item in list
 
-List = [1, 2, 4, 6, 7]
-List.append(9)
+List = [1, 2, 4, 6, 7, 9]
 # print(List)
 
 # here the func insert the list in list instead of numbers
@@ -112,7 +111,6 @@ L2 = [1, 2, 3, 4, [5, 6]]
 print(5 not in L1)
 print([5, 6] in L2)
 
-
 # Loops
 
 for i in L1:
@@ -122,7 +120,6 @@ print()
 for i in L2:
     print(i, end=' ')
 print()
-
 
 # List functions
 
@@ -139,6 +136,66 @@ print(L2.index(2))
 # copy
 print(L1.copy())
 
+# List Comprehension
+# provides a concise way of creating lists.
+
+# Advantages of List Comprehension
+
+# More time-efficient and space-efficient than loops.
+# Require fewer lines of code.
+# Transforms iterative statement into a formula.
+
+# Add 1 to 10 numbers to a list
+
+L = []
+
+for i in range(1, 11):
+    L.append(i)
+
+print(L)
+
+L = [i for i in range(1, 11)]
+print(L)
+
+# Print all numbers divisible by 5 in the range of 1 to 50
+L = [i for i in range(1, 51) if i % 5 == 0]
+print(L)
+
+# find languages which start with letter p
+languages = ['java', 'python', 'php', 'c', 'javascript']
+
+var = [language for language in languages if language.startswith('p')]
+print(var)
+
+# Nested if with List Comprehension
+basket = ['apple', 'guava', 'cherry', 'banana']
+my_fruits = ['apple', 'kiwi', 'grapes', 'banana']
+
+var1 = [fruit for fruit in my_fruits if fruit in basket if fruit.startswith('a')]
+
+print(var1)
+
+# Print a (3,3) matrix using list comprehension -> Nested List comprehension
+var2 = [[i * j for i in range(1, 4)] for j in range(1, 4)]
+
+print(var2)
+
+# cartesian products -> List comprehension on 2 lists together
+L1 = [1, 2, 3, 4]
+L2 = [5, 6, 7, 8]
+
+var3 = [i*j for i in L1 for j in L2]
+
+
+# 2 ways to traverse a list
+# item-wise
+# index-wise
+
+
+L = [1, 2, 3, 4]
+
+for i in range(0, len(L)):
+    print(i, end=" ")
 
 
 
