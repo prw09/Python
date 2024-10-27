@@ -11,7 +11,7 @@ if maxi < num2:
     maxi = num2
 if maxi < num3:
     maxi = num3
-# print(maxi)
+print(maxi)
 
 
 # 2 . Write a program that will convert Celsius value to Fahrenheit
